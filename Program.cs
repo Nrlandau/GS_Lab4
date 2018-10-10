@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Lab_4 by Nicholas Landau
+    This program takes a number and finds the squares and cubes of all of the numbers below and equal to it.
+ */
+
+using System;
 
 namespace Lab4
 {
@@ -6,7 +10,7 @@ namespace Lab4
     {
         static void Main(string[] args)
         {
-            int number = 0;
+            long number = 0;
             while (number != -1)
             {
                 System.Console.WriteLine("Input a positive number or -1 to quit:");
@@ -15,11 +19,11 @@ namespace Lab4
                 {
                     continue;
                 }
-                System.Console.WriteLine("{0}\t\t{1}\t\t{2}","Number","Squared","Cubed");
-                System.Console.WriteLine("{0}\t\t{0}\t\t{0}","=======");
-                for(int i =1; i <= number; i++)
+                System.Console.WriteLine("{0,-13} {1,-13} {2,-13}","Number","Squared","Cubed");
+                System.Console.WriteLine("{0,-13} {0,-13} {0,-13}","=======");
+                for(long i =1; i <= number; i++)
                 {
-                    System.Console.WriteLine("{0}\t\t{1}\t\t{2}",i, i * i, i * i * i);
+                    System.Console.WriteLine("{0,-13} {1,-13} {2,-13}",i, i * i, i * i * i);
                 }
             }
         }
